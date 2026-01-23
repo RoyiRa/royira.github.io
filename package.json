@@ -1,0 +1,20 @@
+{
+  "name": "royira.github.io",
+  "version": "1.0.0",
+  "description": "Royi Rassin's Portfolio Website",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/royira/royira.github.io.git"
+  },
+  "author": "Royi Rassin",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}

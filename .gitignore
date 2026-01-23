@@ -1,9 +1,7 @@
+node_modules/
+dist/
+.DS_Store
+*.log
 *.swp
 ~*
 *~
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
-_notebooks/.ipynb_checkpoints
