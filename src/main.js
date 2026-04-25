@@ -1,17 +1,29 @@
 import './styles/main.css';
-import { initScrollAnimations, initSmoothScroll } from './utils/scroll-animations';
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize scroll animations
-  initScrollAnimations();
+const KEY = 'theme';
+const root = document.documentElement;
+const btn = document.querySelector('.theme-toggle');
 
-  // Initialize smooth scroll for anchor links
-  initSmoothScroll();
+function currentTheme() {
+  const explicit = root.getAttribute('data-theme');
+  if (explicit) return explicit;
+  return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
 
-  // Make hero visible immediately
-  const hero = document.querySelector('.hero');
-  if (hero) {
-    hero.classList.add('visible');
-  }
+function renderLabel() {
+  if (!btn) return;
+  btn.textContent = currentTheme() === 'dark' ? 'light' : 'dark';
+}
+
+renderLabel();
+
+btn?.addEventListener('click', () => {
+  const next = currentTheme() === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem(KEY, next);
+  renderLabel();
+});
+
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  if (!root.hasAttribute('data-theme')) renderLabel();
 });
