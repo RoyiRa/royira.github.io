@@ -30,8 +30,22 @@ body {
 
 .hero {
   display: flex;
+  align-items: center;
+  gap: var(--sp-6);
+}
+
+.hero-copy {
+  display: flex;
   flex-direction: column;
   gap: var(--sp-3);
+}
+
+.profile-pic {
+  width: clamp(112px, 18vw, 152px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  flex: 0 0 auto;
 }
 
 .note {
@@ -64,6 +78,10 @@ body {
 @media (max-width: 640px) {
   .page {
     padding: var(--sp-8) var(--sp-4) var(--sp-16);
+  }
+  .hero {
+    align-items: flex-start;
+    gap: var(--sp-4);
   }
   .note {
     margin-top: var(--sp-12);
