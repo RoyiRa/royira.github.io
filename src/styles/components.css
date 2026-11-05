@@ -117,28 +117,32 @@
   max-width: 44rem;
 }
 
-.paper-press {
+.paper-badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: var(--sp-2);
+  max-width: 100%;
+  padding: var(--sp-1) var(--sp-2);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--bg);
   font-family: var(--font-mono);
-  font-size: var(--fs-xs);
-  letter-spacing: 0.02em;
-  margin-bottom: calc(-1 * var(--sp-2));
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
-.paper-press a {
-  color: var(--accent);
-}
-
-.paper-press a::before {
-  content: '↗ ';
-}
-
-.paper-press a:hover {
+a.paper-badge:hover {
+  color: var(--bg);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-.paper-press em {
-  font-style: italic;
+a.paper-badge:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .paper-title {
