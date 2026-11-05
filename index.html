@@ -129,21 +129,41 @@
 
       <article class="paper">
         <aside class="paper-meta">
-          <span class="venue">EMNLP Findings</span>
+          <span class="venue">Findings of EMNLP</span>
           <span class="year">2026</span>
         </aside>
         <div class="paper-body">
-          <h2 class="paper-title">GRADE: Quantifying Sample Diversity in Text-to-Image Models</h2>
+          <h2 class="paper-title">Quantifying and Mitigating Default Behaviors in Text-to-Image Models</h2>
           <p class="paper-blurb">
-            For an under-specified prompt like “a dog”, a good model should produce a variety of reasonable
-            images. <em>GRADE</em> uses a VLM to propose prompt-relevant attributes (breed, color, setting)
-            and measures entropy over them. Most production models are more mode-collapsed than people think —
-            and it's getting worse, not better.
+            An underspecified prompt like “a dog” can produce the same breed or color again and again.
+            <em>GRADE</em> measures these default behaviors attribute by attribute. We trace them to
+            reporting bias in training captions and test the link with controlled fine-tuning.
+            Explicitly specifying sampled attributes broadens the outputs, with some loss of
+            faithfulness to other prompt details.
           </p>
           <div class="paper-links">
-            <a href="https://arxiv.org/abs/2410.22592" target="_blank" rel="noopener">paper</a>
+            <a href="https://aclanthology.org/2026.findings-emnlp.1596/" target="_blank" rel="noopener">paper</a>
             <a href="https://github.com/RoyiRa/GRADE-Quantifying-sample-diversity-in-text-to-image-models" target="_blank" rel="noopener">code</a>
             <a href="https://royira.github.io/GRADE/" target="_blank" rel="noopener">project</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="paper">
+        <aside class="paper-meta">
+          <span class="venue">NAACL</span>
+          <span class="year">2025</span>
+        </aside>
+        <div class="paper-body">
+          <h2 class="paper-title">DreamSync: Aligning Text-to-Image Generation with Image Understanding Feedback</h2>
+          <p class="paper-blurb">
+            <em>DreamSync</em> uses vision-language models to help text-to-image models learn from their own
+            generations. We generate candidate images, select them for prompt faithfulness and visual
+            quality, and iteratively fine-tune on the selected examples. This improves generation
+            without additional human annotations or reinforcement learning.
+          </p>
+          <div class="paper-links">
+            <a href="https://aclanthology.org/2025.naacl-long.304/" target="_blank" rel="noopener">paper</a>
           </div>
         </div>
       </article>
